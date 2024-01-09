@@ -34,6 +34,11 @@ view: order_items {
     type: number
     sql: ${TABLE}.sale_price ;;
   }
+
+  measure: Test {
+    type: number
+    sql: sum(${sale_price}) ;;
+  }
   measure: count {
     type: count
     drill_fields: [id, orders.id, inventory_items.id]
