@@ -16,6 +16,12 @@ view: inventory_items {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.created_at ;;
   }
+
+  dimension: created_date1 {
+    type: string
+    order_by_field: created_date
+    sql: ${created_date} ;;
+  }
   dimension: product_id {
     type: number
     # hidden: yes
